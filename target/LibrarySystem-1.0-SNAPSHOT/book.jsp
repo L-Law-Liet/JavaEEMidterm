@@ -1,9 +1,11 @@
 <%@ page import="kz.sitedev.LibrarySystem.models.User" %>
 <%@ page import="kz.sitedev.LibrarySystem.models.Book" %>
 <%@ page import="java.util.List" %>
-<jsp:include page="layout/header.jsp" />
-<% User user = null;
-    user = (User) request.getSession().getAttribute("user"); %>
+<jsp:forward page="layout/header.jsp" />
+
+<%--statement--%>
+<%! User user = null; %>
+    <% user = (User) request.getSession().getAttribute("user"); %>
 <div class="btn btn-dark w-100 mb-3">
     <h1>Add a book</h1>
 </div>

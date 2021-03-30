@@ -5,7 +5,10 @@
 <% User user = (User) request.getSession().getAttribute("user"); %>
 <div class="btn btn-dark w-100 mb-3">
     <h1>Cabinet
+<%--statement--%>
         <% if(request.getAttribute("user") != null) { %>
+
+        <%--expression--%>
         <p><%=user.getName()%></p>
         <% } %>
     </h1>
